@@ -21,21 +21,17 @@ Before running the application, ensure the following are installed:
 
 ## Installation
 
-1. Clone the repository or copy the script to your local machine.
-   ```bash
-   git clone <repository_url>
-   cd <repository_folder>
-   ```
+1. Download
+   [Click Here !](https://github.com/dword32bit/openvpn-gui/releases/download/1.0/opengui)
 
-2. Run the script directly:
+2. Copy the script to your binaries:
    ```bash
-   python3 openvpn_gui.py
+   sudo mv opengui /usr/bin/
    ```
-
-3. (Optional) Create a standalone binary:
+   
+3. Run The Program anywhere on your terminal:
    ```bash
-   pyinstaller --onefile --name openvpn_gui openvpn_gui.py
-   ./dist/openvpn_gui
+   ./opengui
    ```
 
 ## Usage
@@ -60,6 +56,6 @@ Feel free to open issues or submit pull requests for improvements or bug fixes.
 
 ---
 
-**Author:** Your Name
+**Author:** dword32bit
 
 
