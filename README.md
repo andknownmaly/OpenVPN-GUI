@@ -2,6 +2,9 @@
 
 OpenVPN GUI is a graphical user interface application designed for managing OpenVPN connections on Linux systems. The application provides a user-friendly way to connect and disconnect OpenVPN using `.ovpn` configuration files. This program is especially useful for users who want an experience similar to OpenVPN applications on Windows.
 
+## Screenshots
+![image](https://github.com/user-attachments/assets/f35cd25f-dcca-4a91-b86b-f8ea51812778)
+
 ## Features
 - Select and manage OpenVPN `.ovpn` configuration files.
 - One-click connect and disconnect buttons.
@@ -41,9 +44,6 @@ Before running the application, ensure the following are installed:
 3. Click **Connect** to start the VPN connection. Enter your `sudo` password when prompted.
 4. To disconnect, click **Disconnect**.
 5. The application will display the connection status in real-time.
-
-## Screenshots
-![image](https://github.com/user-attachments/assets/f35cd25f-dcca-4a91-b86b-f8ea51812778)
 
 
 ## Limitations
