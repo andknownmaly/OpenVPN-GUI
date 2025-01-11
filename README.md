@@ -24,12 +24,12 @@ Before running the application, ensure the following are installed:
 1. Download
    [Click Here !](https://github.com/dword32bit/OpenVPN-GUI/releases/download/1.0/opengui)
 
-2. Copy the script to your binaries:
+2. Move The script to your binaries:
    ```bash
    sudo mv opengui /usr/bin/
    ```
    
-3. Run The Program anywhere on your terminal:
+3. Run The program anywhere on your terminal:
    ```bash
    ./opengui
    ```
