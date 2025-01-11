@@ -22,7 +22,7 @@ Before running the application, ensure the following are installed:
 ## Installation
 
 1. Download
-   [Click Here !](https://github.com/dword32bit/openvpn-gui/releases/download/1.0/opengui)
+   [Click Here !](https://github.com/dword32bit/OpenVPN-GUI/releases/download/1.0/opengui)
 
 2. Copy the script to your binaries:
    ```bash
