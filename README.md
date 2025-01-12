@@ -36,6 +36,29 @@ Before running the application, ensure the following are installed:
    ```bash
    ./opengui
    ```
+## Alternative - Build shortcut
+1. create shortcut
+   ```bash
+   sudo nano /usr/share/applications/opengui.desktop
+   ```
+   ```bash
+   [Desktop Entry]
+   Version=1.0
+   Name=OpenVPN GUI
+   Comment=Run the OpenGUI application
+   Exec=/usr/bin/opengui
+   Terminal=false
+   Type=Application
+   Categories=Utility;
+   ```
+   to add icon on shortcut
+   ```bash
+   Icon=application-default-icon
+   ```
+3. change permissions
+   ```bash
+   sudo chmod +x /usr/share/applications/opengui.desktop
+   ```
 
 ## Usage
 
