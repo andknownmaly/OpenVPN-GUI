@@ -32,7 +32,7 @@ Before running the application, ensure the following are installed:
    sudo mv opengui /usr/bin/
    ```
    
-3. Run The program anywhere on your terminal:
+3. Run The program anywhere on your linux:
    ```bash
    ./opengui
    ```
