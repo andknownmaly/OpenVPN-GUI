@@ -17,47 +17,28 @@ OpenVPN GUI is a graphical user interface application designed for managing Open
 Before running the application, ensure the following are installed:
 
 1. **Python 3**
-2. **Linux Module** (just install it):
+2. **Dependencies**:
    ```bash
-   sudo apt install python3-gi python3-gi-cairo gir1.2-gtk-3.0 openvpn
+   python3-gi
+   python3-gi-cairo
+   gir1.2-gtk-3.0
+   openvpn
    ```
 
 ## Installation
 
-1. Download
-   [Click Here !](https://github.com/dword32bit/OpenVPN-GUI/releases/download/1.0/opengui)
-
-2. Move The script to your binaries:
+1. Clone this repo
+2. change directory
    ```bash
-   sudo mv opengui /usr/bin/
+   cd OpenVPN-GUI
    ```
-   
-3. Run The program anywhere on your linux:
+3. give permissions
    ```bash
-   ./opengui
+   chmod +x opengui-installer.sh
    ```
-## Alternative - Build shortcut
-1. create shortcut
+4. install
    ```bash
-   sudo nano /usr/share/applications/opengui.desktop
-   ```
-   ```bash
-   [Desktop Entry]
-   Version=1.0
-   Name=OpenVPN GUI
-   Comment=Run the OpenGUI application
-   Exec=/usr/bin/opengui
-   Terminal=false
-   Type=Application
-   Categories=Utility;
-   ```
-   to add icon on shortcut
-   ```bash
-   Icon=/path/to/icon
-   ```
-3. change permissions
-   ```bash
-   sudo chmod +x /usr/share/applications/opengui.desktop
+   sudo opengui-installer.sh
    ```
 
 ## Usage
