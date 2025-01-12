@@ -6,45 +6,45 @@ echo "                          v1.0"
 echo "=============================="
 
 if [[ $EUID -ne 0 ]]; then
-   echo "Mohon jalankan script ini dengan 'sudo' atau sebagai root."
+   echo "Please run this script using 'sudo' or become superuser."
    exit 1
 fi
 
-echo "Memulai instalasi dependensi..."
+echo "Starting Dependencies installation..."
 sudo apt install -y python3-gi python3-gi-cairo gir1.2-gtk-3.0 openvpn wget nano
 
 if [[ $? -ne 0 ]]; then
-    echo "Terjadi kesalahan saat menginstal dependensi. Instalasi dihentikan."
+    echo "Error. Installation Stopped."
     exit 1
 fi
 
-echo "Semua dependensi berhasil diinstal."
+echo "All dependencies installed successfully."
 
-echo "Mengunduh OpenGUI..."
+echo "Downloading OpenGUI..."
 wget -q https://github.com/dword32bit/OpenVPN-GUI/releases/download/1.0/opengui
 
 if [[ $? -ne 0 ]]; then
-    echo "Gagal mengunduh opengui. Instalasi dihentikan."
+    echo "Failed to download opengui. Installation stopped."
     exit 1
 fi
 
-echo "Membuat direktori untuk ikon..."
+echo "Create a directory for icons..."
 sudo mkdir -p /opt/opengui
 
-echo "Mengunduh ikon OpenVPN..."
+echo "Downloading the OpenVPN icon..."
 wget -q https://github.com/dword32bit/OpenVPN-GUI/releases/download/1.0/openvpn.ico
 
 if [[ $? -ne 0 ]]; then
-    echo "Gagal mengunduh ikon. Instalasi dihentikan."
+    echo "Failed to download icon. Installation stopped."
     exit 1
 fi
 
-echo "Memindahkan file..."
+echo "Move files..."
 sudo mv openvpn.ico /opt/opengui
 sudo mv opengui /usr/bin/
 sudo chmod +x /usr/bin/opengui
 
-echo "Membuat file desktop entry..."
+echo "Create a desktop entry file..."
 cat <<EOF | sudo tee /usr/share/applications/opengui.desktop > /dev/null
 [Desktop Entry]
 Version=1.0
@@ -59,4 +59,4 @@ EOF
 
 sudo chmod +x /usr/share/applications/opengui.desktop
 
-echo "Instalasi OpenGUI selesai. Anda sekarang dapat menjalankan OpenGUI dari menu aplikasi."
+echo "OpenGUI installation is complete. You can now run OpenGUI from the application menu."
