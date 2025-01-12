@@ -15,7 +15,7 @@ OpenVPN GUI is a graphical user interface application designed for managing Open
 
 ## Prerequisites
 
-Before running the application, ensure the following are installed:
+Dependencies will be the installed:
 
 1. **Python 3**
 2. **Dependencies**:
