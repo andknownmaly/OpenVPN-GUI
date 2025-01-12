@@ -4,7 +4,7 @@
 # Tujuan: Menginstal dependensi dan menyiapkan OpenGUI
 
 echo "=============================="
-echo " OpenGUI Installerv1.0"
+echo " OpenGUI Installer"
 echo "                          v1.0"
 echo "=============================="
 
@@ -17,7 +17,7 @@ fi
 echo "Memulai instalasi dependensi..."
 
 # Perintah untuk menginstal dependensi
-sudo apt update && sudo apt install -y python3-gi python3-gi-cairo gir1.2-gtk-3.0 openvpn wget nano
+sudo apt install -y python3-gi python3-gi-cairo gir1.2-gtk-3.0 openvpn wget nano
 
 if [[ $? -ne 0 ]]; then
     echo "Terjadi kesalahan saat menginstal dependensi. Instalasi dihentikan."
