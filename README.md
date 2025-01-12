@@ -38,7 +38,7 @@ Before running the application, ensure the following are installed:
    ```
 4. install
    ```bash
-   sudo opengui-installer.sh
+   sudo bash opengui-installer.sh
    ```
 
 ## Usage
