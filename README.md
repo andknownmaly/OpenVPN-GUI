@@ -53,7 +53,7 @@ Before running the application, ensure the following are installed:
    ```
    to add icon on shortcut
    ```bash
-   Icon=application-default-icon
+   Icon=/path/to/icon
    ```
 3. change permissions
    ```bash
