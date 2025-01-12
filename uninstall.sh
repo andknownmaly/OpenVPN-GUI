@@ -5,31 +5,31 @@ echo " OpenGUI Uninstaller"
 echo "=============================="
 
 if [[ $EUID -ne 0 ]]; then
-   echo "Mohon jalankan script ini dengan 'sudo' atau sebagai root."
+   echo "Please run this script with 'sudo' or as root."
    exit 1
 fi
 
-echo "Memulai proses penghapusan OpenGUI..."
+echo "Starts the OpenGUI removal process..."
 
 if [[ -f /usr/share/applications/opengui.desktop ]]; then
-    echo "Menghapus desktop entry..."
+    echo "Delete desktop entries..."
     sudo rm -f /usr/share/applications/opengui.desktop
 else
-    echo "Desktop entry tidak ditemukan, melewati langkah ini."
+    echo "Desktop entry not found, skip this step."
 fi
 
 if [[ -d /opt/opengui ]]; then
-    echo "Menghapus folder /opt/opengui..."
+    echo "Deleting the /opt/opengui folder..."
     sudo rm -rf /opt/opengui
 else
-    echo "Folder /opt/opengui tidak ditemukan, melewati langkah ini."
+    echo "Folder /opt/opengui not found, skip this step."
 fi
 
 if [[ -f /usr/bin/opengui ]]; then
-    echo "Menghapus binary opengui..."
+    echo "Removing opengui binaries..."
     sudo rm -f /usr/bin/opengui
 else
-    echo "Binary opengui tidak ditemukan, melewati langkah ini."
+    echo "Opengui binary not found, skip this step."
 fi
 
-echo "Proses penghapusan OpenGUI selesai."
+echo "The OpenGUI removal process is complete."
