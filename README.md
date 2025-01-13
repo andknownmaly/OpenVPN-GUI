@@ -13,19 +13,6 @@ OpenVPN GUI is a graphical user interface application designed for managing Open
 - Password dialog for `sudo` authentication.
 - Windows-like interface with GTK3 for Linux.
 
-## Prerequisites
-
-Dependencies will be the installed:
-
-1. **Python 3**
-2. **Dependencies**:
-   ```bash
-   python3-gi
-   python3-gi-cairo
-   gir1.2-gtk-3.0
-   openvpn
-   ```
-
 ## Installation
 
 1. Clone this repo
