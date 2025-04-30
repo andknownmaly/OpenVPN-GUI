@@ -21,7 +21,7 @@ fi
 echo "All dependencies installed successfully."
 
 echo "Downloading OpenGUI..."
-wget -q https://github.com/dword32bit/OpenVPN-GUI/releases/download/1.0/opengui
+wget -q https://github.com/andknownmaly/OpenVPN-GUI/releases/download/1.0/opengui
 
 if [[ $? -ne 0 ]]; then
     echo "Failed to download opengui. Installation stopped."
