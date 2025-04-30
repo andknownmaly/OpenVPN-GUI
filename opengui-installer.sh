@@ -32,7 +32,7 @@ echo "Create a directory for icons..."
 sudo mkdir -p /opt/opengui
 
 echo "Downloading the OpenVPN icon..."
-wget -q https://github.com/dword32bit/OpenVPN-GUI/releases/download/1.0/openvpn.ico
+wget -q https://github.com/andknownmaly/OpenVPN-GUI/releases/download/1.0/openvpn.ico
 
 if [[ $? -ne 0 ]]; then
     echo "Failed to download icon. Installation stopped."
