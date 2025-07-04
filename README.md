@@ -48,6 +48,6 @@ Feel free to open issues or submit pull requests for improvements or bug fixes.
 
 ---
 
-**Author:** dword32bit
+**Author:** andknownmaly
 
 
