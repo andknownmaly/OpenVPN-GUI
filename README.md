@@ -2,6 +2,10 @@
 
 A simple GTK-based OpenVPN client manager for Linux.
 
+---
+<img width="2000" height="1414" alt="Teks paragraf Anda" src="https://github.com/user-attachments/assets/77d3e376-81fc-49c6-94b0-b28479ce20ed" />
+
+
 ## Features
 
 - Simple and clean interface
