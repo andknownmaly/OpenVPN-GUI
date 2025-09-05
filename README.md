@@ -1,53 +1,71 @@
-# OpenVPN GUI for Linux
+# OpenVPN GUI
 
-OpenVPN GUI is a graphical user interface application designed for managing OpenVPN connections on Linux systems. The application provides a user-friendly way to connect and disconnect OpenVPN using `.ovpn` configuration files. This program is especially useful for users who want an experience similar to OpenVPN applications on Windows.
-
-## Screenshots
-![image](https://github.com/user-attachments/assets/3fd1304f-8352-4baf-bbaa-38a35bbe9fe0)
-
+A simple GTK-based OpenVPN client manager for Linux.
 
 ## Features
-- Select and manage OpenVPN `.ovpn` configuration files.
-- One-click connect and disconnect buttons.
-- Real-time status indicator (Connected/Disconnected).
-- Password dialog for `sudo` authentication.
-- Windows-like interface with GTK3 for Linux.
+
+- Simple and clean interface
+- Easy configuration management
+- Multiple VPN profiles support
+- System tray integration
+- Secure password handling
+- Database-backed configuration storage
+
+## Requirements
+
+- Python 3.6+
+- GTK 3.0
+- OpenVPN
+- python3-gi (PyGObject)
 
 ## Installation
 
-1. Clone this repo
-2. change directory
+1. Make sure you have the required dependencies:
    ```bash
+   sudo apt install python3 python3-gi openvpn
+   ```
+
+2. Clone the repository:
+   ```bash
+   git clone https://github.com/andknownmaly/OpenVPN-GUI.git
    cd OpenVPN-GUI
    ```
-3. give permissions
+
+3. Run the installer:
    ```bash
-   chmod +x opengui-installer.sh
-   ```
-4. install
-   ```bash
-   sudo bash opengui-installer.sh
+   chmod +x install.sh
+   ./install.sh
    ```
 
 ## Usage
 
-1. Launch the application.
-2. Click **Select .ovpn File** to choose your OpenVPN configuration file.
-3. Click **Connect** to start the VPN connection. Enter your `sudo` password when prompted.
-4. To disconnect, click **Disconnect**.
-5. The application will display the connection status in real-time.
+1. Launch OpenVPN GUI from your applications menu or run `opengui` in terminal
+2. Click "Add Connection" to add a new VPN configuration
+3. Select your .ovpn file and give it a name
+4. Use the toggle switch to connect/disconnect
+5. Right-click on a configuration to edit or delete it
 
+## Configuration
 
-## Limitations
+- VPN configurations are stored in `~/.config/openvpn-gui/configs.db`
+- The application uses sudo for OpenVPN connections
+- Each configuration can be renamed without affecting the original .ovpn file
 
-- The application requires `sudo` permissions to run OpenVPN.
-- Ensure the `.ovpn` file is correctly configured.
+## Uninstallation
 
-## Contribution
-Feel free to open issues or submit pull requests for improvements or bug fixes.
+To remove OpenVPN GUI:
 
----
+```bash
+chmod +x uninstall.sh
+./uninstall.sh
+```
 
-**Author:** andknownmaly
+## License
+
+MIT License
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
 
 
