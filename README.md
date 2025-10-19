@@ -101,11 +101,3 @@ Feel free to open a [Pull Request](https://github.com/andknownmaly/OpenVPN-GUI/p
 ## 🪪 License
 
 This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
-
----
-
-### 🔎 Keywords
-
-`OpenVPN GUI`, `Linux VPN client`, `GTK OpenVPN`, `OpenVPN frontend`, `VPN manager for Linux`, `Kali Linux VPN`, `Ubuntu OpenVPN GUI`, `OpenVPN Python`
-
----
