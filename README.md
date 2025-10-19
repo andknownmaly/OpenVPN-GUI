@@ -1,75 +1,111 @@
-# OpenVPN GUI
+# 🧩 OpenVPN GUI for Linux
 
-A simple GTK-based OpenVPN client manager for Linux.
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Platform](https://img.shields.io/badge/platform-Linux-blue.svg)](https://www.linux.org/)
+[![Python](https://img.shields.io/badge/python-3.6%2B-yellow.svg)](https://www.python.org/)
+[![GTK](https://img.shields.io/badge/GTK-3.0-orange.svg)](https://www.gtk.org/)
+
+A **modern, lightweight, and user-friendly OpenVPN client GUI for Linux**, built with **GTK and Python**.
+Easily manage and connect to multiple VPN profiles with secure password handling and tray integration.
 
 ---
-<img width="2000" height="1414" alt="Teks paragraf Anda" src="https://github.com/user-attachments/assets/77d3e376-81fc-49c6-94b0-b28479ce20ed" />
 
+<img width="2000" height="1414" alt="OpenVPN GUI Screenshot" src="https://github.com/user-attachments/assets/77d3e376-81fc-49c6-94b0-b28479ce20ed" />
 
-## Features
+---
 
-- Simple and clean interface
-- Easy configuration management
-- Multiple VPN profiles support
-- System tray integration
-- Secure password handling
-- Database-backed configuration storage
+## 🚀 Features
 
-## Requirements
+* 🧭 Simple and intuitive GTK interface
+* 🔐 Secure password handling
+* 🗂️ Manage multiple OpenVPN profiles easily
+* 🪟 System tray integration for quick access
+* 💾 SQLite-backed configuration database
+* ⚙️ Works seamlessly on Debian-based distros (Ubuntu, Kali, etc.)
 
-- Python 3.6+
-- GTK 3.0
-- OpenVPN
-- python3-gi (PyGObject)
+---
 
-## Installation
+## 🧰 Requirements
 
-1. Make sure you have the required dependencies:
-   ```bash
-   sudo apt install python3 python3-gi openvpn
-   ```
+Make sure these dependencies are installed:
 
-2. Clone the repository:
+```bash
+sudo apt install python3 python3-gi openvpn
+```
+
+---
+
+## 🧩 Installation
+
+1. Clone this repository:
+
    ```bash
    git clone https://github.com/andknownmaly/OpenVPN-GUI.git
    cd OpenVPN-GUI
    ```
 
-3. Run the installer:
+2. Run the installer:
+
    ```bash
    chmod +x install.sh
    ./install.sh
    ```
 
-## Usage
+🧠 *Tip:* The installer automatically configures the TUN module so you don’t need to run `sudo modprobe tun` manually anymore.
 
-1. Launch OpenVPN GUI from your applications menu or run `opengui` in terminal
-2. Click "Add Connection" to add a new VPN configuration
-3. Select your .ovpn file and give it a name
-4. Use the toggle switch to connect/disconnect
-5. Right-click on a configuration to edit or delete it
+---
 
-## Configuration
+## 💡 Usage
 
-- VPN configurations are stored in `~/.config/openvpn-gui/configs.db`
-- The application uses sudo for OpenVPN connections
-- Each configuration can be renamed without affecting the original .ovpn file
+1. Launch **OpenVPN GUI** from the applications menu or run:
 
-## Uninstallation
+   ```bash
+   opengui
+   ```
+2. Click **“Add Connection”** to import your `.ovpn` file
+3. Assign a custom name and connect using the toggle switch
+4. Right-click a connection to **edit** or **delete** it
 
-To remove OpenVPN GUI:
+---
+
+## ⚙️ Configuration Details
+
+* All VPN configurations are stored in:
+
+  ```
+  ~/.config/openvpn-gui/configs.db
+  ```
+* The GUI runs OpenVPN using `sudo` for secure network control
+* Renaming connections doesn’t affect the original `.ovpn` files
+
+---
+
+## ❌ Uninstallation
+
+To completely remove OpenVPN GUI:
 
 ```bash
 chmod +x uninstall.sh
 ./uninstall.sh
 ```
 
-## License
+---
 
-MIT License
+## 🤝 Contributing
 
-## Contributing
+Contributions, issues, and feature requests are welcome!
+Feel free to open a [Pull Request](https://github.com/andknownmaly/OpenVPN-GUI/pulls).
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+---
 
+## 🪪 License
 
+This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
+
+---
+
+### 🔎 Keywords
+
+`OpenVPN GUI`, `Linux VPN client`, `GTK OpenVPN`, `OpenVPN frontend`, `VPN manager for Linux`, `Kali Linux VPN`, `Ubuntu OpenVPN GUI`, `OpenVPN Python`
+
+---
