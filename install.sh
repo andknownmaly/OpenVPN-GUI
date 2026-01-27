@@ -3,8 +3,8 @@
 echo "Installing OpenVPN GUI..."
 
 echo "Downloading files..."
-wget -P /tmp https://github.com/andknownmaly/OpenVPN-GUI/releases/download/2.1/opengui
-wget -P /tmp https://github.com/andknownmaly/OpenVPN-GUI/releases/download/2.1/openvpn.ico
+wget -P /tmp https://github.com/andknownmaly/OpenVPN-GUI/releases/download/2.2/opengui
+wget -P /tmp https://github.com/andknownmaly/OpenVPN-GUI/releases/download/2.2/openvpn.ico
 
 sudo mkdir -p /opt/opengui
 sudo mkdir -p /usr/local/bin
