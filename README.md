@@ -36,19 +36,13 @@ sudo apt install python3 python3-gi openvpn
 ---
 
 ## 🧩 Installation
-
-1. Clone this repository:
-
+Just copy this script :D
    ```bash
-   git clone https://github.com/andknownmaly/OpenVPN-GUI.git
-   cd OpenVPN-GUI
+   bash <(curl -fsSL https://raw.githubusercontent.com/andknownmaly/OpenVPN-GUI/main/install.sh)
    ```
-
-2. Run the installer:
-
+or
    ```bash
-   chmod +x install.sh
-   ./install.sh
+   curl -fsSL https://raw.githubusercontent.com/andknownmaly/OpenVPN-GUI/main/install.sh | less
    ```
 
 🧠 *Tip:* The installer automatically configures the TUN module so you don’t need to run `sudo modprobe tun` manually anymore.
@@ -85,8 +79,11 @@ sudo apt install python3 python3-gi openvpn
 To completely remove OpenVPN GUI:
 
 ```bash
-chmod +x uninstall.sh
-./uninstall.sh
+bash <(curl -fsSL https://raw.githubusercontent.com/andknownmaly/OpenVPN-GUI/main/uninstall.sh)
+```
+or
+```bash
+curl -fsSL https://raw.githubusercontent.com/andknownmaly/OpenVPN-GUI/main/uninstall.sh | less
 ```
 
 ---
