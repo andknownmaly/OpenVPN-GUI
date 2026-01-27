@@ -10,7 +10,8 @@ Easily manage and connect to multiple VPN profiles with secure password handling
 
 ---
 
-<img width="2000" height="1414" alt="OpenVPN GUI Screenshot" src="https://github.com/user-attachments/assets/77d3e376-81fc-49c6-94b0-b28479ce20ed" />
+<img width="1427" height="793" alt="image" src="https://github.com/user-attachments/assets/6802f7f6-7185-40eb-beee-20addf513f31" />
+
 
 ---
 
