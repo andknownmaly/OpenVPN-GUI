@@ -56,7 +56,7 @@ or
    ```bash
    opengui
    ```
-2. Click **“Add Connection”** to import your `.ovpn` file
+2. Click **“Add”** to import your `.ovpn` file
 3. Assign a custom name and connect using the toggle switch
 4. Right-click a connection to **edit** or **delete** it
 
