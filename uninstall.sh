@@ -1,11 +1,11 @@
 #!/bin/bash
 
 echo "=============================="
-echo " OpenGUI FULL Uninstaller"
+echo " OpenGUI Uninstaller"
 echo "=============================="
 
 if [[ $EUID -ne 0 ]]; then
-  echo "Run with sudo."
+  echo "Run this script with sudo."
   exit 1
 fi
 
@@ -23,13 +23,19 @@ rm -f  /usr/share/applications/opengui.desktop
 rm -f  /usr/share/icons/hicolor/*/apps/opengui.*
 rm -f  /usr/share/pixmaps/opengui.*
 
-echo "[*] Removing user files..."
-rm -rf "$USER_HOME/.config/openvpn-gui"
-rm -rf "$USER_HOME/.local/share/opengui"
-rm -rf "$USER_HOME/.local/share/applications/opengui.desktop"
-rm -rf "$USER_HOME/.cache/opengui"
+echo
+read -p "Remove user config ($USER_HOME/.config/openvpn-gui)? [y/N]: " -n 1 -r
+echo
 
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+  echo "[*] Removing user config..."
+  rm -rf "$USER_HOME/.config/openvpn-gui"
+else
+  echo "[*] User config preserved."
+fi
+
+echo
 echo "[*] Updating desktop database..."
 update-desktop-database >/dev/null 2>&1 || true
 
-echo "[✓] OpenGUI completely removed. No survivors."
+echo "[✓] OpenGUI uninstall completed."
