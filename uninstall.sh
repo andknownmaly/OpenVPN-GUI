@@ -1,42 +1,35 @@
 #!/bin/bash
 
 echo "=============================="
-echo " OpenGUI Uninstaller"
+echo " OpenGUI FULL Uninstaller"
 echo "=============================="
 
 if [[ $EUID -ne 0 ]]; then
-   echo "Please run this script with 'sudo' or as root."
-   exit 1
+  echo "Run with sudo."
+  exit 1
 fi
 
-echo "Starts the OpenGUI removal process..."
+TARGET_USER=${SUDO_USER:-root}
+USER_HOME=$(eval echo "~$TARGET_USER")
 
-if [[ -d /opt/opengui ]]; then
-    echo "Deleting the /opt/opengui folder..."
-    sudo rm -rf /opt/opengui
-else
-    echo "Folder /opt/opengui not found, skip this step."
-fi
-
-if [[ -f /usr/local/bin/opengui ]]; then
-    echo "Removing opengui binaries..."
-    sudo rm -f /usr/local/bin/opengui
-else
-    echo "Opengui binary not found, skip this step."
-fi
-
-if [[ -f /usr/share/applications/opengui.desktop ]]; then
-    echo "Delete desktop entries..."
-    sudo rm -f /usr/share/applications/opengui.desktop
-else
-    echo "Desktop entry not found, skip this step."
-fi
-
-read -p "Remove user configurations? (y/N) " -n 1 -r
+echo "[*] Target user : $TARGET_USER"
+echo "[*] Home dir    : $USER_HOME"
 echo
-if [[ $REPLY =~ ^[Yy]$ ]]
-then
-    rm -rf ~/.config/openvpn-gui
-fi
 
-echo "The OpenGUI removal process is complete."
+echo "[*] Removing system files..."
+rm -rf /opt/opengui
+rm -f  /usr/local/bin/opengui
+rm -f  /usr/share/applications/opengui.desktop
+rm -f  /usr/share/icons/hicolor/*/apps/opengui.*
+rm -f  /usr/share/pixmaps/opengui.*
+
+echo "[*] Removing user files..."
+rm -rf "$USER_HOME/.config/openvpn-gui"
+rm -rf "$USER_HOME/.local/share/opengui"
+rm -rf "$USER_HOME/.local/share/applications/opengui.desktop"
+rm -rf "$USER_HOME/.cache/opengui"
+
+echo "[*] Updating desktop database..."
+update-desktop-database >/dev/null 2>&1 || true
+
+echo "[✓] OpenGUI completely removed. No survivors."
