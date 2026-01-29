@@ -17,8 +17,8 @@ sudo ln -sf /opt/opengui/opengui /usr/local/bin/opengui
 
 cat << EOF | sudo tee /usr/share/applications/opengui.desktop
 [Desktop Entry]
-Name=OpenVPN GUI
-Comment=Simple OpenVPN GUI Client
+Name=OpenVPN
+Comment=Manage openvpn connection with gui interactive
 Exec=opengui
 Icon=/opt/opengui/openvpn.ico
 Terminal=false
