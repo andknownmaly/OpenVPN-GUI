@@ -6,12 +6,11 @@
 [![GTK](https://img.shields.io/badge/GTK-3.0-orange.svg)](https://www.gtk.org/)
 
 A **modern, lightweight, and user-friendly OpenVPN client GUI for Linux**, built with **GTK and Python**.
-Easily manage and connect to multiple VPN profiles with secure password handling and tray integration.
+Easily manage and connect to multiple VPN profiles with secure password handling.
 
 ---
 
 <img width="1427" height="793" alt="image" src="https://github.com/user-attachments/assets/6802f7f6-7185-40eb-beee-20addf513f31" />
-
 
 ---
 
@@ -20,33 +19,36 @@ Easily manage and connect to multiple VPN profiles with secure password handling
 * 🧭 Simple and intuitive GTK interface
 * 🔐 Secure password handling
 * 🗂️ Manage multiple OpenVPN profiles easily
-* 🪟 System tray integration for quick access
 * 💾 SQLite-backed configuration database
-* ⚙️ Works seamlessly on Debian-based distros (Ubuntu, Kali, etc.)
+* 🎨 **Auto-theme detection** - supports all Desktop Environments (GNOME, KDE, XFCE, etc.)
+* 🌓 **Dark/Light mode** with automatic detection
+* ⚡ **Optimized performance** - stable for long-term usage
+* ⚙️ Works seamlessly on all major Linux distributions
 
 ---
 
 ## 🧰 Requirements
 
-Make sure these dependencies are installed:
-
 ```bash
 sudo apt install python3 python3-gi openvpn
 ```
 
+💡 **For KDE Users:** Also install `breeze-gtk-theme` for better theme integration!
+
 ---
 
 ## 🧩 Installation
-Just copy this script :D
-   ```bash
-   sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/andknownmaly/OpenVPN-GUI/main/install.sh)"
-   ```
-or
-   ```bash
-   sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/andknownmaly/OpenVPN-GUI/main/install.sh)"
-   ```
 
-🧠 *Tip:* The installer automatically configures the TUN module so you don’t need to run `sudo modprobe tun` manually anymore.
+**Quick Install:**
+```bash
+sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/andknownmaly/OpenVPN-GUI/main/install.sh)"
+```
+or
+```bash
+sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/andknownmaly/OpenVPN-GUI/main/install.sh)"
+```
+
+🧠 *Tip:* The installer automatically installs dependencies and configures the TUN module.
 
 ---
 
@@ -57,7 +59,7 @@ or
    ```bash
    opengui
    ```
-2. Click **“Add”** to import your `.ovpn` file
+2. Click **"Add"** to import your `.ovpn` file
 3. Assign a custom name and connect using the toggle switch
 4. Right-click a connection to **edit** or **delete** it
 
@@ -71,7 +73,17 @@ or
   ~/.config/openvpn-gui/configs.db
   ```
 * The GUI runs OpenVPN using `sudo` for secure network control
-* Renaming connections doesn’t affect the original `.ovpn` files
+* Renaming connections doesn't affect the original `.ovpn` files
+
+---
+
+## 🎨 Theme Support
+
+This app automatically adapts to your desktop environment theme!
+
+**Supported:** GNOME, KDE Plasma, XFCE, Cinnamon, MATE, and more.
+
+**KDE Users:** See [THEME_SUPPORT.md](THEME_SUPPORT.md) for theme setup guide.
 
 ---
 
