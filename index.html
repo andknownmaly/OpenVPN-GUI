@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenVPN-GUI | Linux VPN Client</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { background-color: #0d1117; color: #c9d1d9; font-family: 'Inter', sans-serif; }
+        .terminal-box { background: #010409; border: 1px solid #30363d; border-radius: 8px; position: relative; }
+        .copy-btn { position: absolute; right: 12px; top: 12px; color: #8b949e; cursor: pointer; transition: 0.2s; }
+        .copy-btn:hover { color: #58a6ff; }
+        .status-dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; margin-right: 5px; }
+    </style>
+</head>
+<body>
+
+    <header class="py-20 px-6 text-center">
+        <div class="flex justify-center mb-6">
+            <div class="p-4 bg-blue-500/10 rounded-2xl border border-blue-500/20">
+                <i class="fab fa-linux text-5xl text-white"></i>
+            </div>
+        </div>
+        <h1 class="text-5xl font-extrabold text-white mb-4 tracking-tight">OpenVPN-GUI</h1>
+        <p class="text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
+            The simplest way to manage OpenVPN on Linux. A lightweight desktop wrapper designed for speed and ease of use.
+        </p>
+    </header>
+
+    <section class="max-w-4xl mx-auto px-6 py-10">
+        <h2 class="text-sm font-bold text-blue-400 uppercase tracking-widest mb-6 flex items-center">
+            <span class="status-dot bg-green-500"></span> Fast Installation
+        </h2>
+        
+        <div class="terminal-box p-6 mb-12">
+            <div class="flex items-center gap-2 mb-4 opacity-50">
+                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                <span class="text-xs font-mono ml-2">install.sh</span>
+            </div>
+            <p class="text-slate-500 font-mono text-sm mb-2"># Run this command to install</p>
+            <code class="text-blue-300 font-mono text-sm block break-all">
+                sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/andknownmaly/OpenVPN-GUI/main/install.sh)"
+            </code>
+        </div>
+
+        <h2 class="text-sm font-bold text-red-400 uppercase tracking-widest mb-6 flex items-center">
+            <span class="status-dot bg-red-500"></span> Uninstallation
+        </h2>
+
+        <div class="terminal-box p-6">
+            <p class="text-slate-500 font-mono text-sm mb-2"># Run this command to remove</p>
+            <code class="text-red-300 font-mono text-sm block break-all">
+                sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/andknownmaly/OpenVPN-GUI/main/uninstall.sh)"
+            </code>
+        </div>
+    </section>
+
+    <section class="max-w-4xl mx-auto px-6 py-20 border-t border-slate-800/50 mt-10">
+        <div class="grid md:grid-cols-2 gap-10">
+            <div>
+                <h3 class="text-white font-bold text-lg mb-3">No Manual Config</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">The installer automatically handles directory permissions, dependencies, and path setup in <code>/opt</code>.</p>
+            </div>
+            <div>
+                <h3 class="text-white font-bold text-lg mb-3">Pure Linux Focus</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">Built specifically for Linux environments, ensuring low resource usage and native performance.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-16 text-center border-t border-slate-900">
+        <p class="text-slate-500 text-sm">
+            Maintainer: <a href="https://github.com/andknownmaly" class="text-blue-400 hover:text-blue-300 transition">andknownmaly</a>
+        </p>
+        <div class="mt-6 flex justify-center gap-6 text-slate-700">
+            <a href="https://github.com/andknownmaly/OpenVPN-GUI" class="hover:text-white transition"><i class="fab fa-github text-2xl"></i></a>
+            <i class="fas fa-shield-halved text-2xl"></i>
+        </div>
+    </footer>
+
+</body>
+</html>
