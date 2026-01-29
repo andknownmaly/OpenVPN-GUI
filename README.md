@@ -84,8 +84,6 @@ This app automatically adapts to your desktop environment theme!
 
 **Supported:** GNOME, KDE Plasma, XFCE, Cinnamon, MATE, and more.
 
-**KDE Users:** See [THEME_SUPPORT.md](THEME_SUPPORT.md) for theme setup guide.
-
 ---
 
 ## ❌ Uninstallation
