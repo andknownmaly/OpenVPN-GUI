@@ -10,7 +10,8 @@ Easily manage and connect to multiple VPN profiles with secure password handling
 
 ---
 
-<img width="1427" height="793" alt="image" src="https://github.com/user-attachments/assets/6802f7f6-7185-40eb-beee-20addf513f31" />
+<img width="1000" height="565" alt="image" src="https://github.com/user-attachments/assets/7731b64a-a0f7-4fcd-9734-1e5fc5260b4b" />
+
 
 ---
 
